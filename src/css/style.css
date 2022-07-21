@@ -1,0 +1,53 @@
+body {
+    margin: auto;
+    margin-top: 1%;
+    background-size: cover;
+    background-image: url(background.jpg);
+    color: white;
+}
+
+h1 {
+    padding: 2%;
+    font-family: roboto;
+}
+
+.parent {
+    margin-left: 5%;
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn.btn-primary {
+    width: 30%;
+    height: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn.btn-secondary {
+    width: 25%;
+    height: 50px;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: cornflowerblue;
+    border: 0px;
+}
+
+.whiteball {
+    width: 10%;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.powerball {
+    width: 10%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
