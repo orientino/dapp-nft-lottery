@@ -13,6 +13,7 @@ App = {
     lotteryAddress: '0x0',
     roundNumber: 0,
     roundActive: false,
+    wonNFT: new Array(),
 
     init: function () {
         return App.initWeb3();
@@ -134,10 +135,13 @@ App = {
 
             // Event LoggingWinner: display all the winners of the round
             instance.LoggingWinner().on('data', function (event) {
-                $("#logging").html("Logging: winners have been announced!");
-                $("#winners").append("<br> " + event.returnValues.winner + " won NFT id " + event.returnValues.id + " of class " + event.returnValues.prizeClass);
-                App.isRoundActive();
-                console.log("[Log] Event LoggingWinner catched.");
+                if (!App.wonNFT.includes(event.returnValues.id)) {
+                    $("#logging").html("Logging: winners have been announced!");
+                    $("#winners").append("<br> " + event.returnValues.winner + " won NFT id " + event.returnValues.id + " of class " + event.returnValues.prizeClass);
+                    App.wonNFT.push(event.returnValues.id);
+                    App.isRoundActive();
+                    console.log("[Log] Event LoggingWinner catched.");
+                }
             });
 
             // Event LoggingRefund: refund the players if in game
