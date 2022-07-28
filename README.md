@@ -1,3 +1,6 @@
+# DApp NFT Lottery 
+Decentralized application that simulates the [powerball](https://en.wikipedia.org/wiki/Powerball) game where the players can win a custom ERC721 NFT token. The application is made by a frontend part in Javascript Web3, and the backed smart contract using Solidity. For more details, check `/reports/`.
+
 # Installing
 ```
 npm init
